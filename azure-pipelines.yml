@@ -34,7 +34,7 @@ stages:
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: |
-          **\*.js
+          *.js
           package.json
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
