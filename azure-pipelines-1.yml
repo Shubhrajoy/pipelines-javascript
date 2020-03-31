@@ -35,6 +35,7 @@ stages:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: |
           server.js
+          deploy_app.sh
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     - task: PublishBuildArtifacts@1
