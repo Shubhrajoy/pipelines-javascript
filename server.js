@@ -1,17 +1,10 @@
-'use strict';
-
-const express = require('express');
-
-// Constants
-const PORT = 3000;
-const HOST = '0.0.0.0';
-
-// App
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello Node.js Sample!\n');
+const http = require('http');
+const hostname = 'azdevops-test02';
+const server = http.createServer((req, res) => {
+res.statusCode = 200;
+res.setHeader('Content-Type', 'text/plain');
+res.end('My Sample App is Up and Running!\n');
 });
-
-var port = process.env.PORT||PORT;
-app.listen(port);
-console.log(`Running on http://${HOST}:${PORT}`);
+server.listen(port, hostname, () => {
+console.log();
+});
